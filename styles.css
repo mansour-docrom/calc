@@ -1,0 +1,114 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+    font-weight: normal;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to right, #00b4db, #0083b0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.calculator {
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    width: 350px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 1px;
+    padding: 20px;
+}
+
+.display {
+    grid-column: 1 / -1;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-around;
+    padding: 15px;
+    word-wrap: break-word;
+    word-break: break-all;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    min-height: 100px;
+}
+
+.previous-operand {
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 1.2rem;
+}
+
+.current-operand {
+    color: white;
+    font-size: 2.5rem;
+}
+
+button {
+    font-size: 1.5rem;
+    border: none;
+    outline: none;
+    background-color: rgba(255, 255, 255, 0.75);
+    padding: 20px;
+    cursor: pointer;
+    border-radius: 8px;
+    margin: 5px;
+    transition: all 0.2s ease;
+}
+
+button:hover {
+    background-color: rgba(255, 255, 255, 0.9);
+    transform: translateY(-2px);
+}
+
+button:active {
+    background-color: rgba(255, 255, 255, 1);
+    transform: translateY(0);
+}
+
+.operator {
+    background-color: rgba(255, 166, 0, 0.8);
+    color: white;
+}
+
+.operator:hover {
+    background-color: rgba(255, 166, 0, 1);
+}
+
+.span-two {
+    grid-column: span 2;
+}
+
+#clear {
+    background-color: rgba(255, 80, 80, 0.8);
+    color: white;
+}
+
+#clear:hover {
+    background-color: rgba(255, 80, 80, 1);
+}
+
+#equals {
+    background-color: rgba(0, 149, 255, 0.8);
+    color: white;
+}
+
+#equals:hover {
+    background-color: rgba(0, 149, 255, 1);
+}
+
+#delete {
+    background-color: rgba(180, 180, 180, 0.8);
+}
+
+#delete:hover {
+    background-color: rgba(180, 180, 180, 1);
+} 
